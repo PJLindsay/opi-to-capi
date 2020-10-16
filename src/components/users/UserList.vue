@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import UserItem from './UserItem.vue';
+import UserItem from './UserItem.vue'
 
 export default {
   components: {
@@ -31,55 +31,55 @@ export default {
       enteredSearchTerm: '',
       activeSearchTerm: '',
       sorting: null,
-    };
+    }
   },
   computed: {
     availableUsers() {
-      let users = [];
+      let users = []
       if (this.activeSearchTerm) {
         users = this.users.filter((usr) =>
           usr.fullName.includes(this.activeSearchTerm)
-        );
+        )
       } else if (this.users) {
-        users = this.users;
+        users = this.users
       }
-      return users;
+      return users
     },
     displayedUsers() {
       if (!this.sorting) {
-        return this.availableUsers;
+        return this.availableUsers
       }
       return this.availableUsers.slice().sort((u1, u2) => {
         if (this.sorting === 'asc' && u1.fullName > u2.fullName) {
-          return 1;
+          return 1
         } else if (this.sorting === 'asc') {
-          return -1;
+          return -1
         } else if (this.sorting === 'desc' && u1.fullName > u2.fullName) {
-          return -1;
+          return -1
         } else {
-          return 1;
+          return 1
         }
-      });
+      })
     },
   },
   methods: {
     updateSearch(val) {
-      this.enteredSearchTerm = val;
+      this.enteredSearchTerm = val
     },
     sort(mode) {
-      this.sorting = mode;
+      this.sorting = mode
     },
   },
   watch: {
     enteredSearchTerm(val) {
       setTimeout(() => {
         if (val === this.enteredSearchTerm) {
-          this.activeSearchTerm = val;
+          this.activeSearchTerm = val
         }
-      }, 300);
+      }, 300)
     }
   },
-};
+}
 </script>
 
 <style scoped>

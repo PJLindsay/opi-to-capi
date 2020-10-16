@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import USER_DATA from './dummy-data.js';
+import USER_DATA from './dummy-data.js'
 
-import UserList from './components/users/UserList.vue';
-import ProjectsList from './components/projects/ProjectsList.vue';
+import UserList from './components/users/UserList.vue'
+import ProjectsList from './components/projects/ProjectsList.vue'
 
 export default {
   components: {
@@ -20,14 +20,14 @@ export default {
     return {
       selectedUser: null,
       activeUsers: USER_DATA,
-    };
+    }
   },
   methods: {
     selectUser(uid) {
-      this.selectedUser = this.activeUsers.find((usr) => usr.id === uid);
+      this.selectedUser = this.activeUsers.find((usr) => usr.id === uid)
     },
   },
-};
+}
 </script>
 
 <style>

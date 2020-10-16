@@ -11,10 +11,10 @@ export default {
   emits: ['list-projects'],
   methods: {
     viewProjects() {
-      this.$emit('list-projects', this.id);
+      this.$emit('list-projects', this.id)
     },
   },
-};
+}
 </script>
 
 <style scoped>

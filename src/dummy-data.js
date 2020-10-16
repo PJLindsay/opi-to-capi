@@ -30,4 +30,4 @@ export default [
     fullName: 'Michael Miller',
     projects: []
   }
-];
+]
