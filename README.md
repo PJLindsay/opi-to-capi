@@ -10,9 +10,11 @@ Code chunks (computed/methods/watch etc.) get moved into setup()
 
 - Allows us to co-locate related logic/computed props/methods in same area of setup()
 
-  - Example: 'Search Logic' and 'Sorting Logic' code are co-located in setup() of UserList.vue
+  - variables/computed/methods for 'Search Logic' co-located in setup() of UserList.vue
 
-  - a lot less scrolling! much easier to adjust or update code (from computed, to methods, to watchers blocks)
+  - variables/computed/methods for 'Sorting Logic' co-located in setup() of UserList.vue
+
+  - a lot less scrolling in a complex components (don't need to scroll between computed, methods, watchers blocks)
 
   - code has cleaner look (for example: replacing this.x with props.x) - seems a bit more intuitive
 
