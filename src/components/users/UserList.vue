@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import UserItem from './UserItem.vue'
 
 export default {
@@ -44,6 +44,14 @@ export default {
       }
       return users
 
+    })
+
+    watch(enteredSearchTerm, function(newValue) {
+      setTimeout(() => {
+        if (newValue === enteredSearchTerm.value) {
+          activeSearchTerm.value = newValue
+        }
+      }, 300)
     })
 
     function updateSearch(val) {
@@ -74,9 +82,6 @@ export default {
     }
 
     return { enteredSearchTerm, activeSearchTerm, sorting, availableUsers, displayedUsers, updateSearch, sort }
-  },
-  methods: {
-
   },
   watch: {
     enteredSearchTerm(val) {
