@@ -46,6 +46,10 @@ export default {
 
     })
 
+    function updateSearch(val) {
+      enteredSearchTerm.value = val
+    }
+
     // SORTING LOGIC
     const sorting = ref(null)
     const displayedUsers = computed(function() {
@@ -65,15 +69,14 @@ export default {
       })
     })
 
-    return { enteredSearchTerm, activeSearchTerm, sorting, availableUsers, displayedUsers }
+    function sort(mode) {
+      sorting.value = mode
+    }
+
+    return { enteredSearchTerm, activeSearchTerm, sorting, availableUsers, displayedUsers, updateSearch, sort }
   },
   methods: {
-    updateSearch(val) {
-      this.enteredSearchTerm = val
-    },
-    sort(mode) {
-      this.sorting = mode
-    },
+
   },
   watch: {
     enteredSearchTerm(val) {
