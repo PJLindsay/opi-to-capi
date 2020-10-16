@@ -22,7 +22,7 @@ export default {
     const activeUsers = USER_DATA // this data never changes so does not need to be a ref
 
     function selectUser(uid) {
-      this.selectedUser = this.activeUsers.find((usr) => usr.id === uid)
+      selectedUser.value = activeUsers.find((usr) => usr.id === uid)
     }
 
     return { selectedUser, activeUsers, selectUser }

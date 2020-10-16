@@ -82,7 +82,14 @@ export default {
       sorting.value = mode
     }
 
-    return { enteredSearchTerm, activeSearchTerm, sorting, availableUsers, displayedUsers, updateSearch, sort }
+    return {
+      activeSearchTerm,
+      displayedUsers,
+      enteredSearchTerm,
+      sorting,
+      sort,
+      updateSearch
+    }
   },
   watch: {
     enteredSearchTerm(val) {
