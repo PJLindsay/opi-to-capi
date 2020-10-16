@@ -29,7 +29,8 @@ export default {
   props: ['users'],
   emits: ['list-projects'],
   setup(props) {
-    // SEARCH LOGIC
+
+    /*  ----------------------  SEARCH LOGIC ---------------------- */
     const enteredSearchTerm = ref('')
     const activeSearchTerm = ref('')
 
@@ -59,7 +60,7 @@ export default {
       enteredSearchTerm.value = val
     }
 
-    // SORTING LOGIC
+    /*  ----------------------  SORT LOGIC ---------------------- */
     const sorting = ref(null)
     const displayedUsers = computed(function() {
       if (!sorting.value) {
@@ -82,6 +83,7 @@ export default {
       sorting.value = mode
     }
 
+    /*  ----------------------  Expose methods/computed/variables to template ---------------------- */
     return {
       activeSearchTerm,
       displayedUsers,
