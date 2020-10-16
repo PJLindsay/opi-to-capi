@@ -27,6 +27,7 @@ export default {
     UserItem,
   },
   props: ['users'],
+  emits: ['list-projects'],
   setup(props) {
     // SEARCH LOGIC
     const enteredSearchTerm = ref('')
