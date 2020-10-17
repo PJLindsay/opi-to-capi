@@ -24,6 +24,10 @@ You can mix and match Options API with Composition API:
 - example: UserItem.vue and BaseSearch.vue use Options API (were not migrated to Composition API)
 
 
+## Refactor
+
+Section 20 #311 refactor for code reuse
+
 ## Installation
 
 npm install
