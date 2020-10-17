@@ -1,7 +1,6 @@
-import { ref, computed } from 'vue'
+import { ref, computed } from 'vue';
 
 export default function useSort(availableItems, sortProperty) {
-
   const sorting = ref(null);
   const displayedUsers = computed(function() {
     if (!sorting.value) {
@@ -12,7 +11,10 @@ export default function useSort(availableItems, sortProperty) {
         return 1;
       } else if (sorting.value === 'asc') {
         return -1;
-      } else if (sorting.value === 'desc' && u1[sortProperty] > u2[sortProperty]) {
+      } else if (
+        sorting.value === 'desc' &&
+        u1[sortProperty] > u2[sortProperty]
+      ) {
         return -1;
       } else {
         return 1;
@@ -28,6 +30,5 @@ export default function useSort(availableItems, sortProperty) {
     displayedUsers,
     sort,
     sorting
-  }
-
+  };
 }
