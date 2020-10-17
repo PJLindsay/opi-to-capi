@@ -32,5 +32,5 @@ export default function useSearch(items, searchProp) {
     enteredSearchTerm.value = val;
   }
 
-  return { enteredSearchTerm, availableItems, updateSearch }
+  return { enteredSearchTerm, availableItems, updateSearch };
 }
