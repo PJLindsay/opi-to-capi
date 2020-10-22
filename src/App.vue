@@ -6,28 +6,28 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import USER_DATA from './dummy-data.js'
+import { ref } from 'vue';
+import USER_DATA from './dummy-data.js';
 
-import UserList from './components/users/UserList.vue'
-import ProjectsList from './components/projects/ProjectsList.vue'
+import UserList from './components/users/UserList.vue';
+import ProjectsList from './components/projects/ProjectsList.vue';
 
 export default {
   components: {
     UserList,
-    ProjectsList,
+    ProjectsList
   },
   setup() {
-    const selectedUser = ref(null)
-    const activeUsers = USER_DATA // this data never changes so does not need to be a ref
+    let selectedUser = ref(null);
+    const activeUsers = USER_DATA; // this data never changes so does not need to be a ref
 
     function selectUser(uid) {
-      selectedUser.value = activeUsers.find((usr) => usr.id === uid)
+      selectedUser.value = activeUsers.find(usr => usr.id === uid);
     }
 
-    return { selectedUser, activeUsers, selectUser }
+    return { selectedUser, activeUsers, selectUser };
   }
-}
+};
 </script>
 
 <style>

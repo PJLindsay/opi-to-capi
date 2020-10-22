@@ -52,7 +52,7 @@ export default {
     const { sorting, displayedUsers, sort } = useSort(
       availableItems,
       'fullName'
-    )
+    );
 
     /*  ----------------------  Expose methods/computed/variables to template ---------------------- */
     return {
