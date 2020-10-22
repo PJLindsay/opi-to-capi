@@ -26,10 +26,10 @@ You can mix and match Options API with Composition API:
 
 ## Installation
 
-npm install
+$ npm install
 
 
 ## Run
 
-npm run serve (Development)
+$ npm run serve (Development)
 
